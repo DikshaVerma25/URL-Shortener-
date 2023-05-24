@@ -2,6 +2,8 @@
 
 URLShort is a simple and customizable URL shortener service that allows you to shorten long URLs into short, memorable links. This project provides a web-based interface for creating and managing shortened URLs.
 
+<img width="1680" alt="Screenshot 2023-05-24 at 3 21 07 PM" src="https://github.com/DikshaVerma25/URL-Shortener-/assets/71563921/430899b8-cd51-4ace-a248-ff44486bd2da">
+
 ## Features
 
 - Shorten long URLs into short, easy-to-remember links
