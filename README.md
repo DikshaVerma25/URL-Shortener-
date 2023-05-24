@@ -31,9 +31,8 @@ You can customize URLShort by modifying the configuration file located at `confi
 
 ## Technologies Used
 
-- Node.js
 - Express.js
-- MongoDB
+- MySQL
 - HTML/CSS
 - JavaScript
 
