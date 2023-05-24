@@ -47,5 +47,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
-- [OpenAI](https://openai.com) for providing the underlying language model used to generate this README template.
+
 
