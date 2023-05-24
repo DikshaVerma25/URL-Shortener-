@@ -2,13 +2,44 @@
 <html lang "en">
     <head>
         <meta charset = "UTF-8">
-        <meta name= "viewport" contect = "width= device-width, initial-scale=1.0">
         <title>URLShort</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
-        <header>
+        <div class ="header">
             <h1> URLShort - Shorten your URLs</h1>
-        </header>  
+        </div>  
+        <div class = "form">
+            <div class = "form-element">
+            <label for="longurl">Enter link</label>
+            <input type="text" id="longurl" placeholder="URLShort"
+        </div>
+        <div class = "form-element">
+            <button id= "create-short-url"> Create Short URL Now!</button>
+        </div>
+    </div>
+        <div class = "result">
+            <a herf = '#' id="short-url">
+            </a>
+        </div>
+        <div class="list">
+            <h2>Shorten URL</h2>
+            <table id="list_of_urls">
+                <thead>
+                    <tr>
+                        <th>LongURL</th>
+                        <th>ShortURL</th>
+                        <th>Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>http://google.com</td>
+                        <td>http://localhost:1337/jfdig</td>
+                        <td>545</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>

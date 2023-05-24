@@ -1,14 +1,83 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: sans-serif;
+body {
+    font-family: "Raleway", sans-serif;
 }
 
-header h1{
- margin: 1rem;
- text-align: center;
+.header {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #683304;
+    color: #fff;
+    font-weight: 600;
+}
+
+.form {
+    padding: 50px 20px;
+    background: #f4f4f4;
+}
+
+.form > div {
+    max-width: 400px;
+    margin: 10px auto;
+}
+
+.form .form-element input,
+.form .form-element button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.form .form-element button {
+    background: #bd8c04b5;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.form .result {
+    text-align: center;
+    border-top: 1px solid #efa573;
+    padding: 20px 0;
+}
+
+.list {
+    width: 800px;
+    margin: 40px auto;
+}
+
+.list h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.list table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.list table thead tr {
+    background: #bd8c04b5;
+    color: #fff;
+}
+
+.list table thead tr th,
+.list table thead tr td {
+    padding: 10px;
+    border: 4px solid #ddd;
+}
+
+.list table tbody tr:nth-child(odd) {
+    background: #e9b9a7;
+}
+.list table tbody tr td {
+    border: 4px solid #ddd; /* Add borders between table cells */
 }
