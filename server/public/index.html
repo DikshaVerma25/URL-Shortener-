@@ -1,45 +1,72 @@
 <!DOCTYPE html>
-<html lang "en">
-    <head>
-        <meta charset = "UTF-8">
-        <title>URLShort</title>
-        <link rel="stylesheet" href="./styles.css">
-    </head>
-    <body>
-        <div class ="header">
-            <h1> URLShort - Shorten your URLs</h1>
-        </div>  
-        <div class = "form">
-            <div class = "form-element">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URLShort</title>
+    <link rel="stylesheet" href="./styles.css">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+</head>
+<body>
+    <div class="header">
+        <h1>URLShort - Shorten your URLs</h1>
+    </div>  
+    <div class="form">
+        <div class="form-element">
             <label for="longurl">Enter link</label>
-            <input type="text" id="longurl" placeholder="URLShort"
+            <input type="text" id="longurl" placeholder="URLShort"> 
         </div>
-        <div class = "form-element">
-            <button id= "create-short-url"> Create Short URL Now!</button>
+        <div class="form-element">
+            <button id="create-short-url">Create Short URL Now!</button>
         </div>
     </div>
-        <div class = "result">
-            <a herf = '#' id="short-url">
-            </a>
-        </div>
-        <div class="list">
-            <h2>Shorten URL</h2>
-            <table id="list_of_urls">
-                <thead>
-                    <tr>
-                        <th>LongURL</th>
-                        <th>ShortURL</th>
-                        <th>Count</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>http://google.com</td>
-                        <td>http://localhost:1337/jfdig</td>
-                        <td>545</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </body>
+    <div class="result">
+        <a href="#" id="short-url"></a>
+    </div>
+    <div class="list">
+        <h2>Shorten URL</h2>
+        <table id="list_of_urls">
+            <thead>
+                <tr>
+                    <th>LongURL</th>
+                    <th>ShortURL</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>http://google.com</td>
+                    <td>http://localhost:1337/jfdig</td>
+                    <td>545</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript" nonce="random-nonce">
+        document.querySelector("#create-short-url").addEventListener("click", function() {
+            let longurl = document.querySelector("#longurl").value.trim();
+            if (longurl.length == 0) {
+                alert("Enter a valid URL");
+                return;
+            } else if (!(longurl.startsWith("http://") || longurl.startsWith("https://"))) {
+                alert("Enter a valid link");
+                return;
+            }
+            fetch("http://localhost:1337/api/create-short-url", {
+                method: "POST",
+                body: JSON.stringify({
+                    longurl: longurl
+                }),
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                }
+            }).then(function(response) {
+                return response.json();
+            }).then(function(data) {
+                console.log(data);
+            }).catch(function(error) {
+                alert("Something went wrong");
+            });
+        });
+    </script>
+</body>
 </html>
