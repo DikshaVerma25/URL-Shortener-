@@ -16,7 +16,7 @@ URLShort is a simple and customizable URL shortener service that allows you to s
 
 You can try out a live demo of URLShort [here](https://your-demo-url.com).
 
-## Installation
+## Installation and running
 
 To install and run URLShort on your local machine, follow these steps:
 
@@ -26,6 +26,7 @@ To install and run URLShort on your local machine, follow these steps:
 4. Configure the database connection in the `config.js` file.
 5. Start the server: `npm start`
 6. Access URLShort in your browser at `http://localhost:1337`
+7. To run the code go to terminal and give the command: "npm run dev"
 
 ## Configuration
 
